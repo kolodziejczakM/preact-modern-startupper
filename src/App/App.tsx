@@ -2,7 +2,7 @@ import { h, ComponentConstructor } from 'preact';
 import PropTypes from 'prop-types';
 import { connect } from 'unistore/preact';
 import { actions, State } from '../store';
-import { rootClass } from './App.styles';
+import { HeadingText } from './App.styles';
 
 interface IProps {}
 interface IState {}
@@ -21,9 +21,12 @@ export const App: ComponentConstructor<IProps, IState> = connect<
     'count',
     actions
 )(({ count, increment }) => (
-    <h1 className={rootClass}>
-        Counter value: {count} <button onClick={increment}>Increment</button>
-    </h1>
+    <HeadingText>
+        <div>
+            Counter value: {count}{' '}
+            <button onClick={increment}>Increment</button>
+        </div>
+    </HeadingText>
 ));
 
 (App as any).propTypes = {

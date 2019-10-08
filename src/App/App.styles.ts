@@ -1,5 +1,9 @@
-import { css } from 'emotion';
+import { h } from 'preact';
+import scoped from 'scoped-style';
 
-export const rootClass = css`
-    color: violet;
+const styled = scoped(h);
+
+export const HeadingText = styled('h1')`
+    color: red;
+    border: 3px solid hsla(185, 100%, 62%, 0.2);
 `;
