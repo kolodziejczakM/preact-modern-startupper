@@ -8091,6 +8091,11 @@ unist-util-visit@^1.1.0:
   dependencies:
     unist-util-visit-parents "^2.0.0"
 
+unistore@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/unistore/-/unistore-3.4.1.tgz#effdee7d9f2e00fdc6cecad5ab598ccd54344d38"
+  integrity sha512-p2Ej8qqrqcD10Ah0ZUKUU/mhRB8pM4q6gzjxq9kZpgxa8dks7oHT8jDP4CqLhoRof3RXOZLKB9EBV1DTzHiJRw==
+
 unquote@~1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/unquote/-/unquote-1.1.1.tgz#8fded7324ec6e88a0ff8b905e7c098cdc086d544"

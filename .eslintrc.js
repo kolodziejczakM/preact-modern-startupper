@@ -12,6 +12,8 @@ module.exports = {
     rules: {
         '@typescript-eslint/no-explicit-any': 0,
         'react/jsx-indent': 0,
+        '@typescript-eslint/no-empty-interface': 0,
+        '@typescript-eslint/interface-name-prefix': 0,
         // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
         // e.g. "@typescript-eslint/explicit-function-return-type": "off",
     },

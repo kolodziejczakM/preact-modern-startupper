@@ -3,7 +3,7 @@
         "outDir": "./dist",
         "sourceMap": true,
         "noImplicitAny": true,
-        "module": "ESNext",
+        "module": "es2015",
         "strict": true,
         "moduleResolution": "node",
         "esModuleInterop": true,
