@@ -10,7 +10,7 @@ if ((module as any).hot) {
 
 render(
     <Provider store={store}>
-        <App />
+        <App author="Marcin Kołodziejczak" />
     </Provider>,
     (document as any).getElementById('root')
 );

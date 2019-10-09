@@ -2,33 +2,36 @@ import { h, ComponentConstructor } from 'preact';
 import PropTypes from 'prop-types';
 import { connect } from 'unistore/preact';
 import { actions, StoreState } from '../store';
-import { HeadingText } from './App.styles';
+import { HeadingSection } from './App.styles';
 
-interface IProps {}
-interface IState {}
+interface ComponentProps {
+    author: string;
+}
 
-interface InjectedProps {
+interface ComponentState {}
+
+interface InjectedProps extends ComponentProps {
     count: number;
     increment: h.JSX.EventHandler<MouseEvent>;
 }
 
-export const App: ComponentConstructor<IProps, IState> = connect<
-    IProps,
-    IState,
-    Partial<StoreState>,
-    InjectedProps
->(
+export const App: ComponentConstructor<
+    ComponentProps,
+    ComponentState
+> = connect<ComponentProps, ComponentState, Partial<StoreState>, InjectedProps>(
     'count',
     actions
-)(({ count, increment }) => (
-    <HeadingText>
+)(({ count, increment, author }) => (
+    <HeadingSection>
         <div>
-            Counter value: {count}{' '}
+            <h1>Counter value: {count}</h1>
+            <div>{author}</div>
+            <hr />
             <button onClick={increment}>Increment</button>
         </div>
-    </HeadingText>
+    </HeadingSection>
 ));
 
 (App as any).propTypes = {
-    count: PropTypes.string.isRequired,
+    testingIfPropTypesCheckingWorks: PropTypes.string.isRequired,
 };
