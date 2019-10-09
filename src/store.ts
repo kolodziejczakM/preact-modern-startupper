@@ -1,7 +1,7 @@
 import createStore from 'unistore';
 import devtools from 'unistore/devtools';
 
-export interface State {
+export interface StoreState {
     count: number;
 }
 
@@ -17,7 +17,7 @@ export const store =
         : devtools(createStore(initialState));
 
 export const actions: ActionCreators = {
-    increment(state: State): Partial<State> {
+    increment(state: StoreState): Partial<StoreState> {
         return { count: state.count + 1 };
     },
 };

@@ -1,7 +1,7 @@
 import { h, ComponentConstructor } from 'preact';
 import PropTypes from 'prop-types';
 import { connect } from 'unistore/preact';
-import { actions, State } from '../store';
+import { actions, StoreState } from '../store';
 import { HeadingText } from './App.styles';
 
 interface IProps {}
@@ -15,7 +15,7 @@ interface InjectedProps {
 export const App: ComponentConstructor<IProps, IState> = connect<
     IProps,
     IState,
-    State,
+    Partial<StoreState>,
     InjectedProps
 >(
     'count',
