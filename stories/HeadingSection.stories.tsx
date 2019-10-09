@@ -1,8 +1,8 @@
 import { h } from 'preact';
-import { HeadingSection } from '../src/App/App.styles';
+import { Container } from '../src/app/app.styles';
 
 export default {
-    title: 'HeadingSection',
+    title: 'AppContainer',
 };
 
-export const withSampleText = (): any => <HeadingSection>TEST</HeadingSection>;
+export const withSampleText = (): any => <Container>TEST</Container>;

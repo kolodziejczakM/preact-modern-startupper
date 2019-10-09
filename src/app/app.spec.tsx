@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/preact';
-import { App } from './App';
+import { App } from './app';
 
 describe('App', () => {
     it('should render correctly', () => {

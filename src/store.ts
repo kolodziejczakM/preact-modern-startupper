@@ -9,7 +9,7 @@ export interface ActionCreators {
     increment: Function;
 }
 
-const initialState = { count: 0 };
+const initialState: StoreState = { count: 0 };
 
 export const store =
     process.env.NODE_ENV === 'production'
