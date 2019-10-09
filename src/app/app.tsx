@@ -1,7 +1,7 @@
 import { h, ComponentConstructor } from 'preact';
 import PropTypes from 'prop-types';
 import { connect } from 'unistore/preact';
-import Router from 'preact-router';
+import { Link, Route } from 'wouter-preact';
 import { TypedComponent } from '../typings/prop-types';
 import { actions, StoreState } from '../store';
 import { Container } from './app.styles';
@@ -25,17 +25,23 @@ const Component: TypedComponent<ComponentProps & InjectedProps> = ({
     author,
 }) => (
     <Container>
-        <div>
+        <section>
             <h1>Counter value: {count}</h1>
             <div>{author}</div>
             <hr />
             <button onClick={increment}>Increment</button>
-        </div>
+        </section>
+        <section>
+            <Link href="/">
+                <a>Home</a>
+            </Link>
+            <Link href="/about-me">
+                <a>About me</a>
+            </Link>
+        </section>
         <main>
-            <Router>
-                <Home path="/" />
-                <AboutMe path="/about-me" />
-            </Router>
+            <Route path="/" component={Home} />
+            <Route path="/about-me" component={AboutMe} />
         </main>
     </Container>
 );
