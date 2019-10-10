@@ -35,8 +35,10 @@ const Component: TypedComponent<ComponentProps & InjectedProps> = ({
             </Link>
         </header>
         <section>
-            <h1>Store works fine</h1>
-            <section>(see redux-dev-tools): {count}</section>
+            <h1>Testing store</h1>
+            <section>
+                (see redux-dev-tools): <strong>{count}</strong>
+            </section>
             <button onClick={increment}>Increment</button>
             <hr />
         </section>

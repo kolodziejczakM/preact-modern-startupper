@@ -18,7 +18,9 @@ export const Home: TypedComponent<{}> = () => {
 
     return (
         <div>
-            <section>Testing pre-rendering</section>
+            <section>
+                <h1>Testing pre-rendering</h1>
+            </section>
             <section>
                 <button
                     onClick={(): void => {
