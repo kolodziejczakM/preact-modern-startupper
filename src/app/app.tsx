@@ -1,7 +1,7 @@
 import { h, ComponentConstructor } from 'preact';
 import PropTypes from 'prop-types';
 import { connect } from 'unistore/preact';
-import { Link, Route } from 'wouter-preact';
+import Router from 'preact-router';
 import { TypedComponent } from '~typings/prop-types';
 import { actions, StoreState } from '../store';
 import { Container, AppDescription } from './app.styles';
@@ -27,12 +27,8 @@ const Component: TypedComponent<ComponentProps & InjectedProps> = ({
     <Container>
         <AppDescription>{description}</AppDescription>
         <header>
-            <Link href="/">
-                <a>Home</a>
-            </Link>
-            <Link href="/about-me">
-                <a>About me</a>
-            </Link>
+            <a href="/">Home</a>
+            <a href="/about-me">About me</a>
         </header>
         <section>
             <h1>Testing store</h1>
@@ -43,8 +39,10 @@ const Component: TypedComponent<ComponentProps & InjectedProps> = ({
             <hr />
         </section>
         <main>
-            <Route path="/" component={Home} />
-            <Route path="/about-me" component={AboutMe} />
+            <Router>
+                <Home path="/" />
+                <AboutMe path="/about-me" />
+            </Router>
         </main>
     </Container>
 );
