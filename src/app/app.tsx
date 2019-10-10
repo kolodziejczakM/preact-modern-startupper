@@ -2,7 +2,7 @@ import { h, ComponentConstructor } from 'preact';
 import PropTypes from 'prop-types';
 import { connect } from 'unistore/preact';
 import { Link, Route } from 'wouter-preact';
-import { TypedComponent } from '../typings/prop-types';
+import { TypedComponent } from '~typings/prop-types';
 import { actions, StoreState } from '../store';
 import { Container, AppDescription } from './app.styles';
 import { Home } from '../routes/home/home';

@@ -20,6 +20,9 @@ const development = {
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
+        alias: {
+            '~typings': path.resolve(__dirname, './src/shared/typings'),
+        },
     },
     module: {
         rules: [

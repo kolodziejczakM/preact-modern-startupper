@@ -10,7 +10,11 @@
         "target": "es6",
         "jsx": "react",
         "jsxFactory": "h",
-        "allowJs": true
+        "allowJs": true,
+        "baseUrl": ".",
+        "paths": {
+            "~typings/*": ["./src/shared/typings/*"]
+        }
     },
     "include": ["./src/**/*"],
     "exclude": ["node_modules", "**/*.spec.ts", "**/*.spec.tsx"]

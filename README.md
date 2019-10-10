@@ -1,6 +1,6 @@
 TODO:
 
--   Add prerendering
+-   Add prerendering DONE
 -   Add plop commands
 -   Add basic service worker support
 
