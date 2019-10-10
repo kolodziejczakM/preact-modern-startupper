@@ -5,6 +5,7 @@ import { App } from './app/app';
 import './styles';
 
 if ((module as any).hot) {
+    (module.hot as any).accept();
     require('preact/debug');
 }
 
