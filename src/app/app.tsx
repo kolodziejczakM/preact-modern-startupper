@@ -4,12 +4,12 @@ import { connect } from 'unistore/preact';
 import { Link, Route } from 'wouter-preact';
 import { TypedComponent } from '../typings/prop-types';
 import { actions, StoreState } from '../store';
-import { Container } from './app.styles';
+import { Container, AppDescription } from './app.styles';
 import { Home } from '../routes/home/home';
 import { AboutMe } from '../routes/aboutMe/aboutMe';
 
 interface ComponentProps {
-    author: string;
+    description: string;
 }
 
 interface ComponentState {}
@@ -22,22 +22,23 @@ interface InjectedProps {
 const Component: TypedComponent<ComponentProps & InjectedProps> = ({
     count,
     increment,
-    author,
+    description,
 }) => (
     <Container>
-        <section>
-            <h1>Counter value: {count}</h1>
-            <div>{author}</div>
-            <hr />
-            <button onClick={increment}>Increment</button>
-        </section>
-        <section>
+        <AppDescription>{description}</AppDescription>
+        <header>
             <Link href="/">
                 <a>Home</a>
             </Link>
             <Link href="/about-me">
                 <a>About me</a>
             </Link>
+        </header>
+        <section>
+            <h1>Store works fine</h1>
+            <section>(see redux-dev-tools): {count}</section>
+            <button onClick={increment}>Increment</button>
+            <hr />
         </section>
         <main>
             <Route path="/" component={Home} />
@@ -57,5 +58,5 @@ export const App: ComponentConstructor<
 Component.propTypes = {
     count: PropTypes.number.isRequired,
     increment: PropTypes.func.isRequired,
-    author: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
 };

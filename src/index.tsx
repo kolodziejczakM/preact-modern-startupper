@@ -11,7 +11,7 @@ if ((module as any).hot) {
 
 render(
     <Provider store={store}>
-        <App author="Marcin Kołodziejczak" />
+        <App description="Minimalistic, high-powered boilerplate" />
     </Provider>,
     (document as any).getElementById('root')
 );

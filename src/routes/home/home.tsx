@@ -1,4 +1,41 @@
 import { h } from 'preact';
+import { useEffect, useState } from 'preact/hooks';
 import { TypedComponent } from '../../typings/prop-types';
 
-export const Home: TypedComponent<{}> = () => <span>Home page</span>;
+export const Home: TypedComponent<{}> = () => {
+    const [limit, setLimit] = useState(2);
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        setTimeout(() => {
+            fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${limit}`)
+                .then(res => res.json())
+                .then(data => {
+                    setData(data);
+                });
+        }, 2000);
+    }, [limit]);
+
+    return (
+        <div>
+            <section>Testing pre-rendering</section>
+            <section>
+                <button
+                    onClick={(): void => {
+                        setLimit(limit => limit + 2);
+                    }}
+                >
+                    Load more
+                </button>
+            </section>
+            <div>
+                {data.map((photo: { thumbnailUrl: string; title: string }) => (
+                    <figure key={photo.thumbnailUrl}>
+                        <img src={photo.thumbnailUrl} alt={photo.title} />
+                        <figcaption>{photo.title}</figcaption>
+                    </figure>
+                ))}
+            </div>
+        </div>
+    );
+};

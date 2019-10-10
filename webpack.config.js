@@ -3,6 +3,8 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 
 const development = {
     entry: './src/index.tsx',
@@ -33,7 +35,7 @@ const development = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'src', 'index.html'),
+            template: './src/index.html',
         }),
         new webpack.HotModuleReplacementPlugin(),
     ],
@@ -45,6 +47,24 @@ const production = {
     mode: 'production',
     name: 'prod',
     devtool: 'source-maps',
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+        }),
+        new PrerenderSPAPlugin({
+            staticDir: path.join(__dirname, 'dist'),
+            routes: ['/', '/about-me'], // These pages will be pre-rendered
+            minify: {
+                collapseBooleanAttributes: true,
+                collapseWhitespace: true,
+                decodeEntities: true,
+                keepClosingSlash: true,
+                sortAttributes: true,
+            },
+            renderer: new Renderer(),
+        }),
+    ],
 };
 
 module.exports = [development, production];
