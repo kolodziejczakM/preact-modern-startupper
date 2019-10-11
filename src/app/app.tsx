@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { Link, Route } from 'wouter-preact';
-import { TypedComponent } from '~typings/prop-types';
+import { TypedComponent } from '../shared/typings/prop-types';
 import { actions, StoreState } from '../store';
 import { useAction, useSelector } from '@preact-hooks/unistore';
 import { Container, AppDescription } from './app.styles';

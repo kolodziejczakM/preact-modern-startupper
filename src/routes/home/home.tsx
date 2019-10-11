@@ -1,6 +1,6 @@
 import { h } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
-import { TypedComponent } from '~typings/prop-types';
+import { TypedComponent } from '../../shared/typings/prop-types';
 
 export const Home: TypedComponent<{}> = () => {
     const [limit, setLimit] = useState(2);
