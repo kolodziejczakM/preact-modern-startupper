@@ -1,9 +1,8 @@
-import { h, ComponentConstructor } from 'preact';
-import PropTypes from 'prop-types';
-import { connect } from 'unistore/preact';
-import Router from 'preact-router';
+import { h } from 'preact';
+import { Link, Route } from 'wouter-preact';
 import { TypedComponent } from '~typings/prop-types';
 import { actions, StoreState } from '../store';
+import { useAction, useSelector } from '@preact-hooks/unistore';
 import { Container, AppDescription } from './app.styles';
 import { Home } from '../routes/home/home';
 import { AboutMe } from '../routes/aboutMe/aboutMe';
@@ -12,51 +11,35 @@ interface ComponentProps {
     description: string;
 }
 
-interface ComponentState {}
-
-interface InjectedProps {
-    count: number;
-    increment: h.JSX.EventHandler<MouseEvent>;
-}
-
-export const AppComponent: TypedComponent<ComponentProps & InjectedProps> = ({
-    count,
-    increment,
+export const App: TypedComponent<ComponentProps> = ({
     description,
-}) => (
-    <Container>
-        <AppDescription>{description}</AppDescription>
-        <header>
-            <a href="/">Home</a>
-            <a href="/about-me">About me</a>
-        </header>
-        <section>
-            <h1>Testing store</h1>
+}: ComponentProps) => {
+    const increment = useAction(actions.increment);
+    const count = useSelector((state: StoreState) => state.count);
+
+    return (
+        <Container>
+            <AppDescription>{description}</AppDescription>
+            <header>
+                <Link href="/">
+                    <a>Home</a>
+                </Link>
+                <Link href="/about-me">
+                    <a>About me</a>
+                </Link>
+            </header>
             <section>
-                (see redux-dev-tools): <strong>{count}</strong>
+                <h1>Testing store</h1>
+                <section>
+                    (see redux-dev-tools): <strong>{count}</strong>
+                </section>
+                <button onClick={increment}>Increment</button>
+                <hr />
             </section>
-            <button onClick={increment}>Increment</button>
-            <hr />
-        </section>
-        <main>
-            <Router>
-                <Home path="/" />
-                <AboutMe path="/about-me" />
-            </Router>
-        </main>
-    </Container>
-);
-
-export const App: ComponentConstructor<
-    ComponentProps,
-    ComponentState
-> = connect<ComponentProps, ComponentState, Partial<StoreState>, InjectedProps>(
-    'count',
-    actions
-)(AppComponent);
-
-AppComponent.propTypes = {
-    count: PropTypes.number.isRequired,
-    increment: PropTypes.func.isRequired,
-    description: PropTypes.string.isRequired,
+            <main>
+                <Route path="/" component={Home} />
+                <Route path="/about-me" component={AboutMe} />
+            </main>
+        </Container>
+    );
 };

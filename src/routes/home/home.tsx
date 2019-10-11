@@ -5,7 +5,6 @@ import { TypedComponent } from '~typings/prop-types';
 export const Home: TypedComponent<{}> = () => {
     const [limit, setLimit] = useState(2);
     const [data, setData] = useState([]);
-
     useEffect(() => {
         setTimeout(() => {
             fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${limit}`)

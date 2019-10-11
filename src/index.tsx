@@ -1,5 +1,5 @@
 import { h, render } from 'preact';
-import { Provider } from 'unistore/preact';
+import { StoreProvider } from '@preact-hooks/unistore';
 import { store } from './store';
 import { App } from './app/app';
 import './styles';
@@ -10,8 +10,8 @@ if ((module as any).hot) {
 }
 
 render(
-    <Provider store={store}>
+    <StoreProvider value={store}>
         <App description="Minimalistic, high-powered boilerplate" />
-    </Provider>,
+    </StoreProvider>,
     (document as any).getElementById('root')
 );
