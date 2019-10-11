@@ -19,7 +19,7 @@ interface InjectedProps {
     increment: h.JSX.EventHandler<MouseEvent>;
 }
 
-const Component: TypedComponent<ComponentProps & InjectedProps> = ({
+export const AppComponent: TypedComponent<ComponentProps & InjectedProps> = ({
     count,
     increment,
     description,
@@ -53,9 +53,9 @@ export const App: ComponentConstructor<
 > = connect<ComponentProps, ComponentState, Partial<StoreState>, InjectedProps>(
     'count',
     actions
-)(Component);
+)(AppComponent);
 
-Component.propTypes = {
+AppComponent.propTypes = {
     count: PropTypes.number.isRequired,
     increment: PropTypes.func.isRequired,
     description: PropTypes.string.isRequired,
