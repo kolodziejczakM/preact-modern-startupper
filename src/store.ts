@@ -1,12 +1,13 @@
 import createStore from 'unistore';
 import devtools from 'unistore/devtools';
+import { Action } from 'unistore';
 
 export interface StoreState {
     count: number;
 }
 
 export interface ActionCreators {
-    increment: Function;
+    increment: Action<StoreState>;
 }
 
 const initialState: StoreState = { count: 0 };
