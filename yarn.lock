@@ -9584,10 +9584,8 @@ schema-utils@^2.0.0, schema-utils@^2.4.1:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
 
-scoped-style@^1.3.0:
+scoped-style@../scoped-style:
   version "1.3.0"
-  resolved "https://registry.yarnpkg.com/scoped-style/-/scoped-style-1.3.0.tgz#1d7794913a86c4ce9887777029b88eb0a403a7ef"
-  integrity sha512-GaJXKYidXxU0HpfFpCpC5mAUzQalqK6QJ1z/6xvx6Tosua0mYrIpsK+evXs18ZockhitwAlzbDnYqZZOjUqNSw==
 
 select-hose@^2.0.0:
   version "2.0.0"

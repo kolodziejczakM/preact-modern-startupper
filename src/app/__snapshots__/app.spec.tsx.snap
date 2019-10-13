@@ -3,10 +3,10 @@
 exports[`App should render correctly 1`] = `
 <DocumentFragment>
   <section
-    class="AEhAbWH "
+    class="0 "
   >
     <h1
-      class="kizKJgl "
+      class="1 "
     >
       This is test description
     </h1>
