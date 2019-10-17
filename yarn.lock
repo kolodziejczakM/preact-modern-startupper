@@ -1045,10 +1045,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@preact-hooks/unistore@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@preact-hooks/unistore/-/unistore-1.0.8.tgz#8f9cf7107857b4d86c43229d8e94b56cf6c38279"
-  integrity sha512-PnIO4f3TE8Ll+AUp64pZG+1YrYbWjUiBlicP+gB00XTGmZ4jOQbnZeVq6NZz020SGjUcj9MtQusLl/4U0KS1gA==
+"@preact-hooks/unistore@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@preact-hooks/unistore/-/unistore-1.0.9.tgz#13fdadd4f67e4b8f1e9086d7b1947c097aa44cb3"
+  integrity sha512-yE5rd0kNRJytQyP1kPlfFEK29ka9VKQtOkLtWSdbaWUTr9IB22MhFfuvovQGkyIBXQnic6TaucCHmrNGt5Er6A==
 
 "@prerenderer/prerenderer@^0.7.2":
   version "0.7.2"
@@ -9584,8 +9584,10 @@ schema-utils@^2.0.0, schema-utils@^2.4.1:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
 
-scoped-style@../scoped-style:
+scoped-style@^1.3.0:
   version "1.3.0"
+  resolved "https://registry.yarnpkg.com/scoped-style/-/scoped-style-1.3.0.tgz#1d7794913a86c4ce9887777029b88eb0a403a7ef"
+  integrity sha512-GaJXKYidXxU0HpfFpCpC5mAUzQalqK6QJ1z/6xvx6Tosua0mYrIpsK+evXs18ZockhitwAlzbDnYqZZOjUqNSw==
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -11303,10 +11305,10 @@ worker-rpc@^0.1.0:
   dependencies:
     microevent.ts "~0.1.1"
 
-wouter-preact@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/wouter-preact/-/wouter-preact-2.3.0.tgz#6a3d2ad5e8cc77402877077d1f45a1a3e61ef329"
-  integrity sha512-QFHb+lO8x0GzSuLmt64BgZtfZWIPXCtG6aiGUvTN71Q7fIqAOymkQWLF0SkkliMHyd8LQjANDFx5Wn8Kp4BniA==
+wouter-preact@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/wouter-preact/-/wouter-preact-2.3.1.tgz#79590c7b8e2a642ead43e691cfef8309e54f129b"
+  integrity sha512-S2rrpRzylbPFpM0u2DXbUNEmrmnMzZxiisXwJbeNQZOZ5d8Pt/ztKY2QrXhuxMCHimvDAHlZeXMtXREEpCeMeA==
 
 wrap-ansi@^2.0.0:
   version "2.1.0"
