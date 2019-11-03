@@ -25,10 +25,7 @@ const development = {
         rules: [
             {
                 test: /\.(ts|tsx)$/,
-                loader: 'awesome-typescript-loader',
-                options: {
-                    configFile: 'tsconfig.json',
-                },
+                loader: 'babel-loader',
             },
         ],
     },

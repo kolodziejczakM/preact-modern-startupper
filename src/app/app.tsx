@@ -3,7 +3,6 @@ import { Link, Route } from 'wouter-preact';
 import { TypedComponent } from '../shared/typings/prop-types';
 import { actions, StoreState } from '../store';
 import { useAction, useSelector } from '@preact-hooks/unistore';
-import { Container, AppDescription } from './app.styles';
 import { Home } from '../routes/home/home';
 import { AboutMe } from '../routes/aboutMe/aboutMe';
 
@@ -18,8 +17,8 @@ export const App: TypedComponent<ComponentProps> = ({
     const count = useSelector((state: StoreState) => state.count);
 
     return (
-        <Container>
-            <AppDescription>{description}</AppDescription>
+        <section>
+            <h1>{description}</h1>
             <header>
                 <Link href="/">
                     <a>Home</a>
@@ -40,6 +39,6 @@ export const App: TypedComponent<ComponentProps> = ({
                 <Route path="/" component={Home} />
                 <Route path="/about-me" component={AboutMe} />
             </main>
-        </Container>
+        </section>
     );
 };

@@ -3,3 +3,4 @@ dist
 .cache
 yarn-error.log
 .vscode
+storybook-static
