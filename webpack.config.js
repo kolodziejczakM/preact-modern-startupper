@@ -1,9 +1,11 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @typescript-eslint/no-var-requires, @typescript-eslint/camelcase */
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const OfflinePlugin = require('offline-plugin');
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 
 const development = {
@@ -35,6 +37,15 @@ const development = {
             template: './src/index.html',
         }),
         new webpack.HotModuleReplacementPlugin(),
+        new WebpackPwaManifest({
+            name: 'Preact PWA app',
+            short_name: 'PreactPWA',
+            description: 'Awesome Preact PWA!',
+            background_color: '#ffffff',
+            crossorigin: 'use-credentials', // can be null, use-credentials or anonymous
+            icons: [],
+        }),
+        new OfflinePlugin(),
     ],
 };
 
@@ -61,6 +72,15 @@ const production = {
             },
             renderer: new Renderer(),
         }),
+        new WebpackPwaManifest({
+            name: 'Preact PWA app',
+            short_name: 'PreactPWA',
+            description: 'Awesome Preact PWA!',
+            background_color: '#ffffff',
+            crossorigin: 'use-credentials', // can be null, use-credentials or anonymous
+            icons: [],
+        }),
+        new OfflinePlugin(),
     ],
 };
 
