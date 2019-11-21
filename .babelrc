@@ -10,6 +10,6 @@
     ],
     "presets": [
         ["@babel/typescript", { "jsxPragma": "h" }],
-        "@babel/preset-env"
+        "@babel/preset-modules"
     ]
 }
