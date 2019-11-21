@@ -2,6 +2,7 @@ import { h, render } from 'preact';
 import { StoreProvider } from '@preact-hooks/unistore';
 import { store } from './store';
 import { App } from './app/app';
+import './styles';
 
 if ((module as any).hot) {
     (module.hot as any).accept();

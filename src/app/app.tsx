@@ -5,6 +5,7 @@ import { actions, StoreState } from '../store';
 import { useAction, useSelector } from '@preact-hooks/unistore';
 import { Home } from '../routes/home/home';
 import { AboutMe } from '../routes/aboutMe/aboutMe';
+import { Wrapper } from './app.styles';
 
 interface ComponentProps {
     description: string;
@@ -17,7 +18,7 @@ export const App: TypedComponent<ComponentProps> = ({
     const count = useSelector((state: StoreState) => state.count);
 
     return (
-        <section>
+        <Wrapper>
             <h1>{description}</h1>
             <header>
                 <Link href="/">
@@ -39,6 +40,6 @@ export const App: TypedComponent<ComponentProps> = ({
                 <Route path="/" component={Home} />
                 <Route path="/about-me" component={AboutMe} />
             </main>
-        </section>
+        </Wrapper>
     );
 };

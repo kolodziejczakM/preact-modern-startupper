@@ -2,7 +2,9 @@
 
 exports[`App should render correctly 1`] = `
 <DocumentFragment>
-  <section>
+  <section
+    class="go1244"
+  >
     <h1>
       This is test description
     </h1>
