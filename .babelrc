@@ -10,6 +10,13 @@
     ],
     "presets": [
         ["@babel/typescript", { "jsxPragma": "h" }],
-        "@babel/preset-modules"
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "current" // this solves: "ReferenceError: regeneratorRuntime is not defined"
+                }
+            }
+        ]
     ]
 }
