@@ -47,7 +47,7 @@ Check out `src/common/utils/rendering.ts` it may be helpful during conditional r
 -   `src/common/theme.ts` - here we have all of our UI registries. This file helps a lot in maintaining app UI.
 -   `src/@types` - we define types here if they haven't been provided by library creator. Unfortunately, TypeScript is still not everywhere ;(
 -   `plopfile.js` - here you can see what is going to be generated after running `npm run generate`. All templates are inside `plop-templates` folder.
--   `src/modules/localisation/i18n.ts` - want do add new language support? Note: default all translations are bundled alongside your app code, but you can always changed that :)
+-   `src/modules/localisation/i18n.ts` - want do add new language support? Note: by default all translations are bundled alongside your app code, but you can always change that :)
 -   `webpack.config.js` - bundler config. You shouldn't need to open it often, it's quite easy to go through it though.
 
 ### What about Redux DevTools support?
