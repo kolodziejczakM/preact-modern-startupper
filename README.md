@@ -19,7 +19,7 @@ Current bundle size (gzipped) is **18.7 KB**.
 -   battle-tested project structure
 -   great code editors support (check _Code editors support_ section to read more about recommended plugins)
 
-If you can stand that **18.7KB** I have good news. If you remove existing example modules & boilerplate you can end up with ~ **11KB** starter.
+If you can't stand that **18.7KB** I have good news. If you remove existing example modules & boilerplate you can end up with ~ **11KB** starter.
 
 Not bad, right? :sunglasses:
 
