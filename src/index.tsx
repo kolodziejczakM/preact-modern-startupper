@@ -2,8 +2,9 @@ import { h, render } from 'preact';
 import { StoreProvider } from '@preact-hooks/unistore';
 import { store } from './store';
 import { App } from './app/app';
-import './styles';
+import './globalStyles';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
+import { LocalisationProvider } from './modules/localisation/localisation.context';
 
 OfflinePluginRuntime.install();
 
@@ -14,7 +15,9 @@ if ((module as any).hot) {
 
 render(
     <StoreProvider value={store}>
-        <App description="Minimalistic, high-powered boilerplate" />
+        <LocalisationProvider>
+            <App description="Minimalistic, high-powered boilerplate" />
+        </LocalisationProvider>
     </StoreProvider>,
     (document as any).getElementById('root')
 );

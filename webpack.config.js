@@ -6,6 +6,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
 const OfflinePlugin = require('offline-plugin');
+const Dotenv = require('dotenv-webpack');
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 
 const development = {
@@ -16,6 +17,11 @@ const development = {
         filename: 'bundle.js',
     },
     devtool: 'eval',
+    stats: {
+        colors: true,
+        entrypoints: false,
+        modules: false,
+    },
     devServer: {
         contentBase: './dist',
         hot: true,
@@ -29,6 +35,13 @@ const development = {
                 test: /\.(ts|tsx)$/,
                 loader: 'babel-loader',
             },
+            {
+                test: /\.(webp|svg|woff|woff2)$/,
+                loader: 'url-loader',
+                options: {
+                    limit: 8192,
+                },
+            },
         ],
     },
     plugins: [
@@ -36,11 +49,12 @@ const development = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
         }),
+        new Dotenv(),
         new webpack.HotModuleReplacementPlugin(),
         new WebpackPwaManifest({
-            name: 'Preact PWA app',
-            short_name: 'PreactPWA',
-            description: 'Awesome Preact PWA!',
+            name: 'preact-typescript-minimalistic',
+            short_name: 'preact',
+            description: 'Minimalistic & modern boilerplate',
             background_color: '#ffffff',
             crossorigin: 'use-credentials', // can be null, use-credentials or anonymous
             icons: [],
@@ -73,9 +87,9 @@ const production = {
             renderer: new Renderer(),
         }),
         new WebpackPwaManifest({
-            name: 'Preact PWA app',
-            short_name: 'PreactPWA',
-            description: 'Awesome Preact PWA!',
+            name: 'preact-typescript-minimalistic',
+            short_name: 'preact',
+            description: 'Minimalistic & modern boilerplate',
             background_color: '#ffffff',
             crossorigin: 'use-credentials', // can be null, use-credentials or anonymous
             icons: [],

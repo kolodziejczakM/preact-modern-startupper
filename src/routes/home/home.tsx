@@ -1,8 +1,15 @@
-import { h } from 'preact';
+import { h, VNode } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
-import { TypedComponent } from '../../shared/typings/prop-types';
+import { TypedComponent } from '@/common/typings/prop-types';
+import { Wrapper } from './home.styles';
+import { Button } from '@/common/components/Button';
 
-export const Home: TypedComponent<{}> = () => {
+interface Photo {
+    thumbnailUrl: string;
+    title: string;
+}
+
+export const Home: TypedComponent<Props> = () => {
     const [limit, setLimit] = useState(2);
     const [data, setData] = useState([]);
     useEffect(() => {
@@ -16,27 +23,38 @@ export const Home: TypedComponent<{}> = () => {
     }, [limit]);
 
     return (
-        <div>
-            <section>
+        <Wrapper>
+            <div>
                 <h1>Testing pre-rendering</h1>
-            </section>
-            <section>
-                <button
+            </div>
+            <div>
+                <Button
                     onClick={(): void => {
                         setLimit(limit => limit + 2);
                     }}
                 >
                     Load more
-                </button>
-            </section>
-            <div>
-                {data.map((photo: { thumbnailUrl: string; title: string }) => (
-                    <figure key={photo.thumbnailUrl}>
-                        <img src={photo.thumbnailUrl} alt={photo.title} />
-                        <figcaption>{photo.title}</figcaption>
-                    </figure>
-                ))}
+                </Button>
             </div>
-        </div>
+            <ul>
+                {data.map(
+                    (photo: Photo): VNode => (
+                        <li key={photo.thumbnailUrl}>
+                            <figure>
+                                <img
+                                    src={photo.thumbnailUrl}
+                                    alt={photo.title}
+                                />
+                                <figcaption>{photo.title}</figcaption>
+                            </figure>
+                        </li>
+                    )
+                )}
+            </ul>
+        </Wrapper>
     );
 };
+
+interface Props {}
+
+Home.propTypes = {};
