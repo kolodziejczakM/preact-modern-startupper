@@ -2,7 +2,6 @@
     <img width="250" height="250" src="https://camo.githubusercontent.com/8b1f23f4dba13c65120b5a7b3aa6c2201bcd25d6/68747470733a2f2f7261776769742e636f6d2f6f6f6164652f617765736f6d652d7072656163742f6d61737465722f7072656163742d6c6f676f2e737667" alt="Preact logo" />
 </div>
 
-<hr / >
 ## _Preact modern minimalistic_
 
 This is minimalistic boilerplate repository which goal is to boost productivity of small / middle size web projects and make new apps highly optimised.
