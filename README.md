@@ -1,19 +1,22 @@
-# Preact modern minimalistic
+<div align="center">
+    <img width="250" height="250" src="https://camo.githubusercontent.com/8b1f23f4dba13c65120b5a7b3aa6c2201bcd25d6/68747470733a2f2f7261776769742e636f6d2f6f6f6164652f617765736f6d652d7072656163742f6d61737465722f7072656163742d6c6f676f2e737667" alt="Preact logo" />
+</div>
 
-This is minimalisic boilerplate repository which goal is to boost productivity of small / middle size web projects and make new apps highly optimised.
+## _Preact modern minimalistic_
+
+This is minimalistic boilerplate repository which goal is to boost productivity of small / middle size web projects and make new apps highly optimised.
 
 Current bundle size (gzipped) is **18.7 KB**.
 
-*You: Why should I care?*
+You: _Why should I care?_
 
-- easy to use boilerplate generators for components, modules
-- storybook support
-- side effects handling (through unistore - additional middlewares not needed)
-- Redux DevTools support
-- localisation support (you can easily start developing multiple-languages app)
-- pre-rendering support (you can produce static HTML webpages out of app routes )
-
-- battle-tested project structure
+-   easy to use boilerplate generators for components and modules
+-   ready to use storybook support
+-   side effects handling - through unistore - additional middlewares are not needed
+-   store compatible with Redux DevTools
+-   localisation support - you can easily start developing multiple-language app
+-   pre-rendering support - you can render static HTML webpages out of app routes
+-   battle-tested project structure
 
 If you can stand that **18.7KB** I have good news. If you remove existing example modules & boilerplate you can end up with ~ **11KB** starter.
 Not bad, right?
@@ -26,7 +29,7 @@ Not bad, right?
 
 -   `src/common/Button`
 
-When developing component it is recommended to use Storybook instead of tinkering in actual app.
+When developing component it is recommended to use Storybook instead of tinkering within actual app.
 To run storybook server: `npm run storybook`
 
 ### Example modules can be found in:
@@ -66,7 +69,6 @@ If you don't want to use it, but you want simple cache on Front-end api calls, t
 
 Beyond scope of this project. Check out: https://github.com/elbywan/wretch-middlewares
 
-
 ### What about lazy loading routes?
 
 Beyond scope of this project.
@@ -78,4 +80,5 @@ Beyond scope of this project, it's recommended to use standard approaches though
 https://github.com/paularmstrong/normalizr
 
 ### Contact
+
 Do not hestitate to ask questions I'm always willing to help - https://twitter.com/kolodziejczakMn

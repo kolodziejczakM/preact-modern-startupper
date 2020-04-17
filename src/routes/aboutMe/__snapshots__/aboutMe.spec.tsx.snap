@@ -2,8 +2,10 @@
 
 exports[`AboutMe should render correctly 1`] = `
 <DocumentFragment>
-  <span>
+  <section
+    class="go84"
+  >
     About me page
-  </span>
+  </section>
 </DocumentFragment>
 `;

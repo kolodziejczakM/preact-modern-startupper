@@ -5,7 +5,7 @@ import { StoreProvider } from '@preact-hooks/unistore';
 import createStore from 'unistore';
 import { App } from './app';
 
-const storeMock = createStore({ count: 12 });
+const storeMock = createStore({ counter: { value: 12 } });
 
 describe('App', () => {
     it('should render correctly', () => {

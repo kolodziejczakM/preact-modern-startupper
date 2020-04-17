@@ -1,7 +1,7 @@
 {
     "name": "preact-typescript-minimalistic",
     "description": "Minimalistic, high-powered boilerplate",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "main": "index.js",
     "license": "MIT",
     "scripts": {
@@ -19,7 +19,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "run-s check:types lint:scripts lint:styles"
+            "pre-commit": "run-s check:types lint:scripts lint:styles test"
         }
     },
     "devDependencies": {

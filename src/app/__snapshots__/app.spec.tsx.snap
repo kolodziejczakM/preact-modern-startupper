@@ -3,18 +3,20 @@
 exports[`App should render correctly 1`] = `
 <DocumentFragment>
   <section
-    class="go1575"
+    class="go84"
   >
     <h1>
       This is test description
     </h1>
     <header>
       <a
+        class=""
         href="/"
       >
         Home
       </a>
       <a
+        class=""
         href="/about-me"
       >
         About me
@@ -25,30 +27,46 @@ exports[`App should render correctly 1`] = `
         Testing store
       </h1>
       <section>
-        (see redux-dev-tools): 
+        Check redux-dev-tools: 
         <strong>
           12
         </strong>
       </section>
-      <button>
+      <hr />
+      <button
+        class="go57736"
+        type="button"
+      >
         Increment
+      </button>
+      <hr />
+      <button
+        class="go57736"
+        type="button"
+      >
+        Change to polish
       </button>
       <hr />
     </section>
     <main>
-      <div>
-        <section>
+      <section
+        class="go84"
+      >
+        <div>
           <h1>
             Testing pre-rendering
           </h1>
-        </section>
-        <section>
-          <button>
+        </div>
+        <div>
+          <button
+            class="go57736"
+            type="button"
+          >
             Load more
           </button>
-        </section>
-        <div />
-      </div>
+        </div>
+        <ul />
+      </section>
     </main>
   </section>
 </DocumentFragment>
