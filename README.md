@@ -69,7 +69,7 @@ https://github.com/preactjs/preact-devtools
 There is simplest service worker setup via webpack OfflinePlugin - https://github.com/NekR/offline-plugin
 If you don't want to use it, but you want simple cache on Front-end api calls, then it's better to use appropriate libraries, check out: https://github.com/elbywan/wretch
 
-### What about eliminating duplicated request, retrying them once fail...? :horse_racing:
+### What about eliminating duplicated requests, retrying them once fail...? :horse_racing:
 
 Beyond scope of this project. Check out: https://github.com/elbywan/wretch-middlewares
 
