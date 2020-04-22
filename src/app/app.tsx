@@ -7,7 +7,7 @@ import { useAction, useSelector } from '@preact-hooks/unistore';
 import { Home } from '@/routes/home/home';
 import { AboutMe } from '@/routes/aboutMe/aboutMe';
 import { Wrapper } from './app.styles';
-import { counterActions } from '@/modules/counter/counter.model';
+import { counterActions } from '@/modules/counter/counter.actions';
 import { selectCounterValue } from '@/modules/counter/counter.selectors';
 import { Button } from '@/common/components/Button';
 import { Text } from '@/modules/localisation/components/text';

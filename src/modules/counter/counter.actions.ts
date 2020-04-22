@@ -1,11 +1,7 @@
 import { AppState } from '@/store';
 import { mergeState } from '@/common/utils/store';
+import { CounterState } from './counter.state';
 
-export const counterState = {
-    value: 0,
-};
-
-export type CounterState = typeof counterState;
 const merge = mergeState<CounterState>('counter');
 
 export const counterActions = {

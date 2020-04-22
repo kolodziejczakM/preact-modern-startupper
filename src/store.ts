@@ -1,7 +1,7 @@
 import createStore from 'unistore';
 import devtools from 'unistore/devtools';
 
-import { counterState } from '@/modules/counter/counter.model';
+import { counterState } from '@/modules/counter/counter.state';
 //<-- IMPORT MODULE STATE -->
 
 const appState = {
