@@ -13,7 +13,7 @@ Current bundle size (gzipped) is **18.7 KB**.
 -   easy to use boilerplate generators for components and modules
 -   ready to use storybook support
 -   side effects handling - through unistore - additional middlewares are not needed
--   store compatible with *Redux DevTools*
+-   store compatible with _Redux DevTools_
 -   localisation support - you can easily start developing multiple-language app
 -   pre-rendering support - you can render static HTML webpages out of app routes
 -   battle-tested project structure - used in real world apps like [Passwords Fountain](https://github.com/kolodziejczakM/passwords-fountain)
@@ -67,7 +67,6 @@ Check out `src/common/utils/rendering.ts` it may be helpful during conditional r
 If you want to run tests only once, use `npm test`.
 You can also use test runner in watch mode by leveraging `npm run test:watch`.
 
-
 ### Commiting changes
 
 After running `git commit` husky pre-commit hook will trigger:
@@ -86,6 +85,7 @@ You probably won't need to run that often, but this will generate production ver
 `npm run build`
 
 <hr>
+
 ## FAQ
 
 ### What about Redux DevTools support? :satellite:
