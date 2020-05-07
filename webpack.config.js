@@ -33,8 +33,10 @@ const development = {
         modules: false,
     },
     devServer: {
-        contentBase: './dist',
         hot: true,
+        historyApiFallback: {
+            disableDotRule: true,
+        },
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js'],
