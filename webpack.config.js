@@ -11,7 +11,7 @@ const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 const CircularDependencyPlugin = require('circular-dependency-plugin');
 
 const pwaManifest = new WebpackPwaManifest({
-    name: 'preact-typescript-minimalistic',
+    name: 'preact-modern-startupper',
     short_name: 'preact',
     description: 'Minimalistic & modern boilerplate',
     background_color: '#ffffff',

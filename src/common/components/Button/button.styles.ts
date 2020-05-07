@@ -8,7 +8,6 @@ export const Wrapper = styled('button')`
     padding: ${theme.spacing.xs6};
     min-width: 120px;
     max-width: 360px;
-    display: grid;
     text-transform: uppercase;
     background: ${theme.colors.black};
     color: ${theme.colors.white};

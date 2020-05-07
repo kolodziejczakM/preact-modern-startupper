@@ -34,14 +34,14 @@ exports[`App should render correctly 1`] = `
       </section>
       <hr />
       <button
-        class="go57736"
+        class="go55981"
         type="button"
       >
         Increment
       </button>
       <hr />
       <button
-        class="go57736"
+        class="go55981"
         type="button"
       >
         Change to polish
@@ -59,7 +59,7 @@ exports[`App should render correctly 1`] = `
         </div>
         <div>
           <button
-            class="go57736"
+            class="go55981"
             type="button"
           >
             Load more
