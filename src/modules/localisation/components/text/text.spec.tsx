@@ -5,7 +5,7 @@ import { Text } from './text.component';
 
 describe('Text', () => {
     it('should render correctly', () => {
-        const { asFragment } = render(<Text>Hello</Text>);
+        const { asFragment } = render(<Text>increment</Text>);
 
         expect(asFragment()).toMatchSnapshot();
     });

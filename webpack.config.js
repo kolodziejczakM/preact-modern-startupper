@@ -19,6 +19,11 @@ const pwaManifest = new WebpackPwaManifest({
     icons: [],
 });
 
+const htmlPluginSetup = new HtmlWebpackPlugin({
+    template: './src/index.html',
+    favicon: './src/assets/favicon-16x16.png',
+});
+
 const development = {
     entry: './src/index.tsx',
     mode: 'development',
@@ -48,7 +53,7 @@ const development = {
                 loader: 'babel-loader',
             },
             {
-                test: /\.(webp|svg|woff|woff2)$/,
+                test: /\.(webp|png|svg|woff|woff2)$/,
                 loader: 'url-loader',
                 options: {
                     limit: 8192,
@@ -58,9 +63,7 @@ const development = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-        }),
+        htmlPluginSetup,
         new Dotenv(),
         new webpack.HotModuleReplacementPlugin(),
         pwaManifest,
@@ -79,9 +82,7 @@ const production = {
     devtool: 'source-maps',
     plugins: [
         new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            template: './src/index.html',
-        }),
+        htmlPluginSetup,
         new Dotenv(), // NOTE: It's recommended to declare your production envs outside application code.
         new PrerenderSPAPlugin({
             staticDir: path.join(__dirname, 'dist'),
@@ -96,7 +97,19 @@ const production = {
             renderer: new Renderer(),
         }),
         pwaManifest,
-        new OfflinePlugin(),
+        new OfflinePlugin({
+            externals: ['about-me/index.html'], // to support refresh on pre-rendered document while being offline
+            responseStrategy: 'network-first',
+            rewrites: (asset) => {
+                if (asset.endsWith('html') && asset !== 'index.html') {
+                    return asset.split('/')[0];
+                } else if (asset === 'index.html') {
+                    return '/';
+                }
+
+                return asset;
+            },
+        }),
     ],
 };
 

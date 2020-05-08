@@ -21,12 +21,12 @@ export const Wrapper = styled('button')`
     &:active {
         box-shadow: none;
     }
-    
+
     &:disabled {
         box-shadow: none;
         background: ${theme.colors.gray};
     }
-    
+
     &:hover:enabled {
         cursor: pointer;
         text-decoration: underline;

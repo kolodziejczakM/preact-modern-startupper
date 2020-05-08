@@ -6,12 +6,19 @@ import { TypedComponent } from '@/common/typings/prop-types';
 import { useAction, useSelector } from '@preact-hooks/unistore';
 import { Home } from '@/routes/home/home';
 import { AboutMe } from '@/routes/aboutMe/aboutMe';
-import { Wrapper } from './app.styles';
+import {
+    Wrapper,
+    LogoWrapper,
+    TitleWrapper,
+    Title,
+    RoutesHeader,
+} from './app.styles';
 import { counterActions } from '@/modules/counter/counter.actions';
 import { selectCounterValue } from '@/modules/counter/counter.selectors';
 import { Button } from '@/common/components/Button';
 import { Text } from '@/modules/localisation/components/text';
 import { useLocalisation } from '@/modules/localisation/localisation.context';
+import logo from '@/assets/logo.png';
 
 export const App: TypedComponent<Props> = ({ description }: Props) => {
     const [, setLanguage] = useLocalisation();
@@ -20,11 +27,16 @@ export const App: TypedComponent<Props> = ({ description }: Props) => {
 
     return (
         <Wrapper>
-            <h1>{description}</h1>
-            <header>
+            <LogoWrapper>
+                <img src={logo} width={250} height={250} alt="project logo" />
+            </LogoWrapper>
+            <TitleWrapper>
+                <Title>{description}</Title>
+            </TitleWrapper>
+            <RoutesHeader>
                 <Link href="/">Home</Link>
                 <Link href="/about-me">About me</Link>
-            </header>
+            </RoutesHeader>
             <section>
                 <h1>Testing store</h1>
                 <section>
@@ -36,7 +48,7 @@ export const App: TypedComponent<Props> = ({ description }: Props) => {
                 </Button>
                 <hr />
                 <Button onClick={(): void => setLanguage('pl')}>
-                    Change to polish
+                    Check translations
                 </Button>
                 <hr />
             </section>

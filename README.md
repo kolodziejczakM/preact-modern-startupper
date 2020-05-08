@@ -1,12 +1,12 @@
 <div align="center">
-    <img width="250" height="250" src="https://camo.githubusercontent.com/8b1f23f4dba13c65120b5a7b3aa6c2201bcd25d6/68747470733a2f2f7261776769742e636f6d2f6f6f6164652f617765736f6d652d7072656163742f6d61737465722f7072656163742d6c6f676f2e737667" alt="Preact logo" />
+    <img src="./src/assets/logo.png" width="250" height="250" alt="project logo" />
 </div>
 
-## _Preact modern startupper_
+## Preact modern startupper
 
 This is minimalistic boilerplate repository which goal is to boost productivity of small / middle size real world web projects and make new apps highly optimised.
 
-Current bundle size (gzipped) is **18.7 KB**.
+Current bundle size (gzipped) is **19.4 KB**.
 
 **You**: _Why should I care:question::question:_
 
@@ -19,7 +19,7 @@ Current bundle size (gzipped) is **18.7 KB**.
 -   battle-tested project structure - used in real world apps like [Passwords Fountain](https://github.com/kolodziejczakM/passwords-fountain)
 -   great code editors support (check _Code editors support_ section to read more about recommended plugins)
 
-If you can't stand that **18.7KB** I have good news. If you remove existing example modules & boilerplate you can end up with ~ **11KB** starter.
+If you can't stand that **19.4KB** I have good news. If you remove existing example modules & boilerplate you can end up with ~ **11KB** starter.
 
 Not bad, right? :sunglasses:
 
@@ -86,6 +86,49 @@ You probably won't need to run that often, but this will generate production ver
 
 <hr>
 
+### Code editors support :computer:
+
+This repo was tested both in WebStorm and VS Code.
+To enhance your developer experience please install following plugins:
+
+**WebStorm:**
+
+-   ESLint
+-   IntelliJ Stylelint Plugin
+-   Styled Components & Style JSX
+-   Rainbow Brackets
+
+To unlock Stylelint for TypeScript files (CSS in JS):
+
+`File -> Settings -> Languages & Frameworks -> Style Sheets -> Stylelint and mark "Process JS files"`.
+
+To turn on formatting on save with Prettier:
+
+`File -> Settings -> Tools -> File Watchers -> and add 3 Prettier watchers - ts, tsx and js files.`
+
+**VS Code:**
+
+-   ESLint
+-   es6-string-css
+-   stylelint
+-   vscode-styled-components
+-   vscode-styled-jsx
+-   Prettier - Code formatter
+-   TODO Highlight
+-   Todo Tree
+-   Bracket Pair Colorizer 2
+
+To unlock formatting on save add with Prettier add these lines to your settings.json:
+
+```
+"editor.formatOnSave": true,
+"[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
+```
+
+<hr>
+
 ## FAQ
 
 ### What about Redux DevTools support? :satellite:
@@ -115,32 +158,6 @@ Beyond scope of this project, but it's recommended to use https://github.com/pra
 
 Beyond scope of this project, it's recommended to use standard approaches though:
 https://github.com/paularmstrong/normalizr
-
-<hr>
-
-### Code editors support :computer:
-
-This repo was tested both in WebStorm and VS Code.
-To enhance your developer experience please install following plugins:
-
-**WebStorm:**
-
--   ESLint
--   IntelliJ Stylelint Plugin
--   Styled Components & Style JSX
--   Rainbow Brackets
-
-**VS Code:**
-
--   ESLint
--   es6-string-css
--   stylelint
--   vscode-styled-components
--   vscode-styled-jsx
--   Prettier - Code formatter
--   TODO Highlight
--   Todo Tree
--   Bracket Pair Colorizer 2
 
 ### Contact :mailbox:
 

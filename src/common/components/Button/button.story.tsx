@@ -8,5 +8,11 @@ export default {
 };
 
 export const defaultView = (): VNode => (
-    <Button onClick={(): void => {}}>Hello thereee</Button>
+    <Button
+        onClick={(): void => {
+            /* eslint-disable @typescript-eslint/no-empty-function */
+        }}
+    >
+        Hello thereee
+    </Button>
 );

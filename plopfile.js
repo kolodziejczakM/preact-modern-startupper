@@ -1,7 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const promptDirectory = require('inquirer-directory');
 
-module.exports = plop => {
+module.exports = (plop) => {
     plop.setPrompt('directory', promptDirectory);
     plop.setGenerator('component', {
         description: 'Generate an application component boilerplate',

@@ -2,6 +2,6 @@
 
 exports[`Text should render correctly 1`] = `
 <DocumentFragment>
-  Hello
+  Increment
 </DocumentFragment>
 `;

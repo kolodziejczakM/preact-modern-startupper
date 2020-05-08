@@ -15,8 +15,8 @@ export const Home: TypedComponent<Props> = () => {
     useEffect(() => {
         setTimeout(() => {
             fetch(`https://jsonplaceholder.typicode.com/photos?_limit=${limit}`)
-                .then(res => res.json())
-                .then(data => {
+                .then((res) => res.json())
+                .then((data) => {
                     setData(data);
                 });
         }, 2000);
@@ -25,12 +25,12 @@ export const Home: TypedComponent<Props> = () => {
     return (
         <Wrapper>
             <div>
-                <h1>Testing pre-rendering</h1>
+                <h1>Check pre-rendering</h1>
             </div>
             <div>
                 <Button
                     onClick={(): void => {
-                        setLimit(limit => limit + 2);
+                        setLimit((limit) => limit + 2);
                     }}
                 >
                     Load more

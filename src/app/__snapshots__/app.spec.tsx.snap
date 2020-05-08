@@ -3,12 +3,30 @@
 exports[`App should render correctly 1`] = `
 <DocumentFragment>
   <section
-    class="go84"
+    class="go115679"
   >
-    <h1>
-      This is test description
-    </h1>
-    <header>
+    <div
+      class="go3163197887"
+    >
+      <img
+        alt="project logo"
+        height="250"
+        src="static-asset-stub"
+        width="250"
+      />
+    </div>
+    <div
+      class="go3058692710"
+    >
+      <h1
+        class="go2656262278"
+      >
+        This is test description
+      </h1>
+    </div>
+    <header
+      class="go3216292504"
+    >
       <a
         class=""
         href="/"
@@ -34,32 +52,32 @@ exports[`App should render correctly 1`] = `
       </section>
       <hr />
       <button
-        class="go55981"
+        class="go3736257620"
         type="button"
       >
         Increment
       </button>
       <hr />
       <button
-        class="go55981"
+        class="go3736257620"
         type="button"
       >
-        Change to polish
+        Check translations
       </button>
       <hr />
     </section>
     <main>
       <section
-        class="go84"
+        class="go102895561"
       >
         <div>
           <h1>
-            Testing pre-rendering
+            Check pre-rendering
           </h1>
         </div>
         <div>
           <button
-            class="go55981"
+            class="go3736257620"
             type="button"
           >
             Load more
